@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ONLY QUALITY — Строительная компания</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b8872f",
+                        "primary-container": "#996c14",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary": "#725b36",
+                        "secondary-container": "#fedeb0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#78613c",
+                        "tertiary": "#5f5f00",
+                        "tertiary-container": "#787900",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "background": "#fff8f3",
+                        "on-background": "#1f1b14",
+                        "surface": "#fff8f3",
+                        "on-surface": "#1f1b14",
+                        "surface-variant": "#ebe1d6",
+                        "on-surface-variant": "#4f4537",
+                        "surface-dim": "#e3d8ce",
+                        "surface-bright": "#fff8f3",
+                        "surface-container": "#f7ece1",
+                        "surface-container-low": "#fdf2e7",
+                        "surface-container-high": "#f1e6dc",
+                        "surface-container-highest": "#ebe1d6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#7f5700",
+                        "outline": "#817565",
+                        "outline-variant": "#d3c4b1",
+                        "inverse-surface": "#353028",
+                        "inverse-on-surface": "#faefe4",
+                        "inverse-primary": "#f5bd60",
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="text-stone-900 font-body antialiased relative min-h-screen overflow-x-hidden">
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- NAVBAR                                   -->
+    <!-- ════════════════════════════════════════ -->
+    <nav class="nav-bar fixed top-0 w-full z-50 flex justify-between items-center px-6 py-5 md:px-12 bg-[#f8f7f6]/80 backdrop-blur-sm">
+        <div class="flex items-center gap-4">
+            <div class="nav-logo text-xl font-black text-[#b8872f] tracking-tighter cursor-pointer">ONLY QUALITY</div>
+            <div class="lang-switcher flex items-center gap-1">
+                <button class="lang-btn" data-lang="cs" title="Čeština">CZ</button>
+                <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+                <button class="lang-btn" data-lang="uk" title="Українська">UA</button>
+                <button class="lang-btn" data-lang="en" title="English">EN</button>
+            </div>
+        </div>
+        <a class="nav-phone" href="tel:+420778514861">
+            <span class="material-symbols-outlined nav-phone-icon">call</span>
+            <span class="nav-phone-number">+420 778 514 861</span>
+        </a>
+        <div class="flex gap-8 items-center">
+            <a class="nav-link active font-['Inter'] uppercase tracking-widest text-sm text-[#b8872f] font-bold" href="#hero" data-i18n="nav.home">HLAVNÍ</a>
+            <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="#about" data-i18n="nav.about">O NÁS</a>
+            <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="#contact" data-i18n="nav.contact">KONTAKTY</a>
+            <a class="nav-gallery font-['Inter'] uppercase tracking-widest text-sm font-bold" href="gallery.html" data-i18n="nav.gallery">GALERIE PRACÍ</a>
+        </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- BLOCK 1: HERO                            -->
+    <!-- ════════════════════════════════════════ -->
+    <div id="hero" class="relative bg-top-half pt-20">
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
+        <div class="relative z-10">
+            <section class="mt-20 grid grid-cols-1 md:grid-cols-2 min-h-[90vh] px-6 md:px-12 py-16 gap-12 items-center">
+                <!-- Left: headline + video -->
+                <div class="flex flex-col gap-8">
+                    <div class="p-6 md:p-0 rounded-xl">
+                        <h1 class="hero-title text-5xl md:text-7xl font-black tracking-tighter leading-none text-[#b8872f] mb-6 drop-shadow-md" data-i18n="hero.title">
+                            STAVÍME<br />NA KVALITU
+                        </h1>
+                        <p class="hero-subtitle text-stone-900 max-w-md text-lg leading-relaxed border-l-4 border-[#b8872f] pl-6 uppercase tracking-tight font-semibold bg-white/60 p-4 rounded-r-lg backdrop-blur-sm" data-i18n="hero.subtitle">
+                            Stavební společnost s kompletním servisem. Od základů po dokončení — kvalita v každé fázi.
+                        </p>
+                    </div>
+                    <!-- Video Slider -->
+                    <div class="hero-video-wrapper video-frame relative w-full rounded-lg overflow-hidden shadow-xl">
+                        <!-- Frame bar top -->
+                        <div class="video-frame-bar flex items-center justify-between px-4 py-2 bg-stone-900/90 backdrop-blur-sm">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#b8872f] font-mono text-xs font-bold tracking-wider" data-i18n="hero.video">VIDEO</span>
+                                <span class="video-counter text-stone-400 font-mono text-xs">01 / 03</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="video-dot w-2 h-2 rounded-full bg-[#b8872f] transition-all duration-300 cursor-pointer" data-dot="0"></span>
+                                <span class="video-dot w-2 h-2 rounded-full bg-stone-600 transition-all duration-300 cursor-pointer" data-dot="1"></span>
+                                <span class="video-dot w-2 h-2 rounded-full bg-stone-600 transition-all duration-300 cursor-pointer" data-dot="2"></span>
+                            </div>
+                        </div>
+                        <!-- Video area -->
+                        <div class="relative w-full aspect-video bg-stone-900">
+                            <!-- Slides -->
+                            <div class="video-slides relative w-full h-full">
+                                <div class="video-slide absolute inset-0 opacity-100 transition-opacity duration-500" data-slide="0">
+                                    <img class="video-poster absolute inset-0 w-full h-full object-cover z-[1]" src="assets/poster-1.svg" alt="Preview 1" />
+                                    <video class="w-full h-full object-contain" controls playsinline preload="metadata">
+                                        <source src="videos/1 vid.MOV" type="video/mp4" />
+                                    </video>
+                                </div>
+                                <div class="video-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500" data-slide="1">
+                                    <img class="video-poster absolute inset-0 w-full h-full object-cover z-[1]" src="assets/poster-2.svg" alt="Preview 2" />
+                                    <video class="w-full h-full object-contain" controls playsinline preload="metadata">
+                                        <source src="videos/2 vid.MP4" type="video/mp4" />
+                                    </video>
+                                </div>
+                                <div class="video-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500" data-slide="2">
+                                    <img class="video-poster absolute inset-0 w-full h-full object-cover z-[1]" src="assets/poster-3.svg" alt="Preview 3" />
+                                    <video class="w-full h-full object-contain" controls playsinline preload="metadata">
+                                        <source src="videos/tri vid.MP4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                            <!-- Play/pause button — pointer-events only on the button itself -->
+                            <div class="video-play-overlay absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                                <button class="play-btn pointer-events-auto w-16 h-16 rounded-full bg-[#b8872f]/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#b8872f] transition-all duration-300 cursor-pointer">
+                                    <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Frame bar bottom — arrows + controls -->
+                        <div class="video-frame-bar flex items-center justify-between px-3 py-2 bg-stone-900/90 backdrop-blur-sm">
+                            <button class="video-arrow-left flex items-center gap-1 px-3 py-1.5 text-stone-400 hover:text-[#b8872f] transition-colors duration-300 cursor-pointer" aria-label="Previous video">
+                                <span class="material-symbols-outlined text-lg">chevron_left</span>
+                                <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline" data-i18n="hero.prev">Předch</span>
+                            </button>
+                            <span class="text-stone-500 text-xs font-mono tracking-widest">ONLY QUALITY</span>
+                            <button class="video-arrow-right flex items-center gap-1 px-3 py-1.5 text-stone-400 hover:text-[#b8872f] transition-colors duration-300 cursor-pointer" aria-label="Next video">
+                                <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline" data-i18n="hero.next">Další</span>
+                                <span class="material-symbols-outlined text-lg">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: services grid -->
+                <div class="relative py-12">
+                    <div class="hero-specs-header mb-12 bg-white/40 p-4 rounded-lg inline-block backdrop-blur-sm border border-white/20">
+                        <h2 class="text-xs font-bold tracking-[0.4em] text-stone-700 uppercase mb-2" data-i18n="hero.directions">SMĚRY PRÁCE</h2>
+                        <h3 class="text-3xl font-black text-stone-900 uppercase tracking-tight" data-i18n="hero.services">NAŠE SLUŽBY</h3>
+                    </div>
+                    <div class="brick-grid">
+                        <div class="brick-item hero-brick-1 glass-panel p-8 brutalist-border shadow-md hover:bg-white/60 border-stone-400">
+                            <span class="text-[#b8872f] font-mono text-sm mb-4 block font-bold">/01</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider text-stone-900" data-i18n="hero.service1">Rodinné domy</h4>
+                        </div>
+                        <div class="brick-item hero-brick-2 bg-[#b8872f] p-8 text-white brutalist-border shadow-lg border-[#b8872f]">
+                            <span class="font-mono text-sm mb-4 block opacity-80">/02</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider" data-i18n="hero.service2">Projektování</h4>
+                        </div>
+                        <div class="brick-item hero-brick-3 glass-panel p-8 brutalist-border shadow-md hover:bg-white/60 border-stone-400">
+                            <span class="text-[#b8872f] font-mono text-sm mb-4 block font-bold">/03</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider text-stone-900" data-i18n="hero.service3">Stavba na klíč</h4>
+                        </div>
+                        <div class="brick-item hero-brick-4 bg-stone-100/70 backdrop-blur-md p-8 brutalist-border shadow-sm border-stone-400">
+                            <span class="text-[#b8872f] font-mono text-sm mb-4 block font-bold">/04</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider text-stone-900" data-i18n="hero.service4">Energeticky úsporné a pasivní domy</h4>
+                        </div>
+                        <div class="brick-item hero-brick-5 glass-panel p-8 brutalist-border shadow-md hover:bg-white/60 border-stone-400">
+                            <span class="text-[#b8872f] font-mono text-sm mb-4 block font-bold">/05</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider text-stone-900" data-i18n="hero.service5">Moderní stavební technologie</h4>
+                        </div>
+                        <div class="brick-item hero-brick-6 glass-panel p-8 brutalist-border shadow-md hover:bg-white/60 border-stone-400">
+                            <span class="text-[#b8872f] font-mono text-sm mb-4 block font-bold">/06</span>
+                            <h4 class="font-bold text-lg uppercase tracking-wider text-stone-900" data-i18n="hero.service6">Rekonstrukce a dokončení</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ── Separator: Hero → About ── -->
+    <div class="section-separator">
+        <div class="sep-icon">
+            <span class="material-symbols-outlined text-[#b8872f]/40 text-lg">expand_more</span>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- BLOCK 2: ABOUT US + PROJECTS             -->
+    <!-- ════════════════════════════════════════ -->
+    <div id="about" class="relative bg-bottom-half">
+        <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px] z-0"></div>
+        <div class="relative z-10">
+            <section class="grid grid-cols-1 md:grid-cols-2 px-6 md:px-12 py-32 gap-16" style="background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);">
+                <!-- Left: philosophy -->
+                <div class="flex flex-col justify-between py-8">
+                    <div>
+                        <h2 class="reveal-left text-6xl font-black text-[#b8872f] uppercase tracking-tighter mb-4 drop-shadow-sm" data-i18n="about.title">PROČ MY?</h2>
+                        <p class="reveal-left text-xs font-bold tracking-[0.4em] text-stone-700 uppercase mb-8" style="transition-delay: 100ms;" data-i18n="about.subtitle">O SPOLEČNOSTI</p>
+                        <div class="reveal h-px bg-[#b8872f]/30 mb-8" style="transition-delay: 150ms;"></div>
+                        <p class="reveal text-2xl font-light text-stone-900 max-w-sm leading-tight uppercase bg-white/40 p-4 rounded-lg backdrop-blur-sm border border-white/50 shadow-sm" style="transition-delay: 200ms;" data-i18n="about.text">
+                            ✓ Velké zkušenosti<br />✓ Nízké ceny<br />✓ Důraz na kvalitu<br />✓ Záruka na práce
+                        </p>
+                    </div>
+                    <a href="gallery.html" class = "reveal group flex items-center gap-6 mt-12 cursor-pointer" style="transition-delay: 300ms;">
+                        <span class="text-2xl font-black text-stone-900 group-hover:text-[#b8872f] transition-colors duration-300" data-i18n="about.work">NAŠE PRÁCE</span>
+                        <span class="material-symbols-outlined text-5xl text-[#b8872f] group-hover:translate-x-4 transition-transform duration-500">trending_flat</span>
+                    </a>
+                </div>
+                    
+                <!-- Right: projects gallery -->
+                <div class="gallery-grid stagger-children">
+                    <div class="reveal gallery-card group relative overflow-hidden aspect-[16/9] brutalist-border border-stone-400 shadow-xl rounded-sm">
+                        <img alt="Проект 1" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="images/tri.jpg" />
+                    </div>
+                    <div class="reveal gallery-card group relative overflow-hidden aspect-[16/9] brutalist-border border-stone-400 shadow-xl rounded-sm">
+                        <img alt="Проект 2" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="images/1.jpg" />
+                    </div>
+                    <div class="reveal gallery-card group relative overflow-hidden aspect-[16/9] brutalist-border border-stone-400 shadow-xl rounded-sm">
+                        <img alt="Проект 3" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="images/2.jpg" />
+                    </div>
+                    <div class="reveal gallery-card group relative overflow-hidden aspect-[16/9] brutalist-border border-stone-400 shadow-md rounded-sm bg-stone-100/80 backdrop-blur-md flex items-center justify-center">
+                        <img alt="Проект 4" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="images/4.jpg" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ── Separator: About → Contact ── -->
+    <div class="section-separator">
+        <div class="sep-icon">
+            <span class="material-symbols-outlined text-[#b8872f]/40 text-lg">expand_more</span>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- BLOCK 3: CONTACT                         -->
+    <!-- ════════════════════════════════════════ -->
+    <div id="contact" class="relative bg-[#f5efe7]">
+        <section class="px-6 md:px-12 py-16 text-center flex flex-col items-center justify-center relative overflow-hidden">
+            <!-- Decorative circles -->
+            <div class="absolute top-10 left-10 w-32 h-32 border border-[#b8872f]/10 rounded-full reveal-scale" style="transition-delay: 400ms;"></div>
+            <div class="absolute bottom-10 right-10 w-48 h-48 border border-[#b8872f]/10 rounded-full reveal-scale" style="transition-delay: 500ms;"></div>
+
+            <p class="reveal text-xs font-bold tracking-[0.4em] text-stone-500 uppercase mb-6" data-i18n="contact.label">KONTAKTY</p>
+            <h2 class="reveal text-4xl md:text-6xl font-black text-stone-900 uppercase tracking-tighter mb-6 drop-shadow-md" style="transition-delay: 100ms;" data-i18n="contact.title">
+                PŘIPRAVENI ZAČÍT<br />STAVĚT?
+            </h2>
+            <p class="reveal text-lg text-stone-600 max-w-md mb-10 uppercase tracking-tight font-medium" style="transition-delay: 200ms;" data-i18n="contact.text">
+                Zanechte poptávku — ozveme se vám pro bezplatnou konzultaci a kalkulaci.
+            </p>
+
+            <!-- Contact Form -->
+            <form class="reveal w-full max-w-2xl text-left" style="transition-delay: 300ms;" action = "https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="b2bea0b9-bee4-418f-be10-97431b301c32">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                    <div>
+                        <label class="block text-xs font-bold tracking-[0.2em] text-stone-500 uppercase mb-2" for="firstName" data-i18n="contact.firstName">Jméno</label>
+                        <input class="w-full px-4 py-3 bg-white/70 border border-stone-300 rounded text-stone-900 font-medium placeholder-stone-400 focus:outline-none focus:border-[#b8872f] focus:ring-1 focus:ring-[#b8872f] transition-colors" type="text" id="firstName" name="firstName" placeholder="Jan" data-i18n-ph="contact.firstNamePh" required />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold tracking-[0.2em] text-stone-500 uppercase mb-2" for="lastName" data-i18n="contact.lastName">Příjmení</label>
+                        <input class="w-full px-4 py-3 bg-white/70 border border-stone-300 rounded text-stone-900 font-medium placeholder-stone-400 focus:outline-none focus:border-[#b8872f] focus:ring-1 focus:ring-[#b8872f] transition-colors" type="text" id="lastName" name="lastName" placeholder="Novák" data-i18n-ph="contact.lastNamePh" required />
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                    <div>
+                        <label class="block text-xs font-bold tracking-[0.2em] text-stone-500 uppercase mb-2" for="phone" data-i18n="contact.phone">Telefon</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2">+420</span>
+                            <input class="w-full pl-16 pr-4 py-3 bg-white/70 border border-stone-300 rounded text-stone-900 font-medium placeholder-stone-400 focus:outline-none focus:border-[#b8872f] focus:ring-1 focus:ring-[#b8872f] transition-colors" type="tel" id="phone" name="phone-digits" placeholder="XXX XXX XXX" pattern="[0-9]{9}" title="Formát: +420XXXXXXXXX" data-i18n-title="contact.phoneTitle" maxlength="9" inputmode="numeric" required />
+                            <input type="hidden" name="phone" id="phone-full" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold tracking-[0.2em] text-stone-500 uppercase mb-2" for="email" data-i18n="contact.email">E-mail</label>
+                        <input class="w-full px-4 py-3 bg-white/70 border border-stone-300 rounded text-stone-900 font-medium placeholder-stone-400 focus:outline-none focus:border-[#b8872f] focus:ring-1 focus:ring-[#b8872f] transition-colors" type="email" id="email" name="email" placeholder="ivan@example.com" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" title="Formát: jmeno@domena.cz" data-i18n-title="contact.emailTitle" data-i18n-ph="contact.emailPh" required />
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold tracking-[0.2em] text-stone-500 uppercase mb-2" for="notes" data-i18n="contact.notes">Poznámky</label>
+                    <textarea class="w-full px-4 py-3 bg-white/70 border border-stone-300 rounded text-stone-900 font-medium placeholder-stone-400 focus:outline-none focus:border-[#b8872f] focus:ring-1 focus:ring-[#b8872f] transition-colors resize-none" id="notes" name="notes" rows="4" placeholder="Popište svůj projekt nebo položte otázku..." data-i18n-ph="contact.notesPh"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="cta-btn px-12 py-5 bg-[#b8872f] text-white font-black text-lg uppercase tracking-widest hover:bg-stone-900 transition-colors duration-500 shadow-xl inline-flex items-center gap-4">
+                        <span data-i18n="contact.submit">ODESLAT POPTÁVKU</span>
+                        <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                    </button>
+                    <div class="mt-6 flex items-center justify-center gap-2 text-stone-500">
+                        <span class="material-symbols-outlined text-[#b8872f] text-xl">call</span>
+                        <span class="text-sm uppercase tracking-wider font-medium" data-i18n="contact.orCall">nebo zavolejte:</span>
+                        <a href="tel:+420778514861" class="text-sm font-bold text-[#b8872f] hover:text-stone-900 transition-colors tracking-wider">+420 778 514 861</a>
+                    </div>
+                </div>
+            </form>
+            <div id ="form-success" class="hidden">
+                <h2 data-i18n="success.title">Спасибо</h2>
+                <p data-i18n="success.description">Благодарим за отправку заявки!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ════════════════════════════════════════ -->
+    <!-- FOOTER                                   -->
+    <!-- ════════════════════════════════════════ -->
+    <footer class="w-full py-12 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start bg-[#f8f7f6]">
+        <div class="mb-8 md:mb-0">
+            <span class="text-2xl font-black text-[#b8872f] mb-4 block">ONLY QUALITY</span>
+            <p class="font-['Inter'] text-xs tracking-tight text-stone-700 uppercase" data-i18n="footer.rights">&copy; 2026 ONLY QUALITY s.r.o.<br />VŠECHNA PRÁVA VYHRAZENA.</p>
+        </div>
+        <div>
+            <h3 class="font-bold text-sm mb-2" data-i18n="footer.company">Údaje o firmě</h3>
+            <p class="text-xs text-stone-700">
+                Adresa: <span class="font-bold">Radlická 2343/48, Praha, 150 00</span><br>
+                IČO: <span class="font-bold">231 66 991</span><br>
+                DIČ: <span class="font-bold">CZ 231 66 991</span><br>
+                Jednatel: <span class="font-bold">Dmytro Hliuzdyn</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm cursor-pointer">
+        <button id="lightbox-close" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-[#b8872f] transition-colors duration-300 cursor-pointer">
+            <span class="material-symbols-outlined text-white text-2xl">close</span>
+        </button>
+        <img id="lightbox-img" class="max-w-[90vw] max-h-[90vh] object-contain rounded shadow-2xl" src="" alt="" />
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
