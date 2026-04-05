@@ -80,17 +80,35 @@
                 <button class="lang-btn" data-lang="en" title="English">EN</button>
             </div>
         </div>
-        <a class="nav-phone" href="tel:+420778514861">
+        <a class="nav-phone hidden sm:inline-flex" href="tel:+420778514861">
             <span class="material-symbols-outlined nav-phone-icon">call</span>
             <span class="nav-phone-number">+420 778 514 861</span>
         </a>
-        <div class="flex gap-8 items-center">
+        <!-- Desktop nav -->
+        <div class="hidden md:flex gap-8 items-center">
             <a class="nav-link active font-['Inter'] uppercase tracking-widest text-sm text-[#b8872f] font-bold" href="#hero" data-i18n="nav.home">HLAVNÍ</a>
             <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="#about" data-i18n="nav.about">O NÁS</a>
             <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="#contact" data-i18n="nav.contact">KONTAKTY</a>
             <a class="nav-gallery font-['Inter'] uppercase tracking-widest text-sm font-bold" href="gallery.html" data-i18n="nav.gallery">GALERIE PRACÍ</a>
         </div>
+        <!-- Mobile hamburger button -->
+        <button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 cursor-pointer" aria-label="Menu">
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+        </button>
     </nav>
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#f8f7f6] flex-col items-center justify-center gap-8 hidden">
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="#hero" data-i18n="nav.home">HLAVNÍ</a>
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="#about" data-i18n="nav.about">O NÁS</a>
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="#contact" data-i18n="nav.contact">KONTAKTY</a>
+        <a class="nav-gallery font-['Inter'] uppercase tracking-widest text-lg font-bold" href="gallery.html" data-i18n="nav.gallery">GALERIE PRACÍ</a>
+        <a class="nav-phone" href="tel:+420778514861">
+            <span class="material-symbols-outlined nav-phone-icon">call</span>
+            <span class="nav-phone-number">+420 778 514 861</span>
+        </a>
+    </div>
 
     <!-- ════════════════════════════════════════ -->
     <!-- BLOCK 1: HERO                            -->
@@ -98,11 +116,11 @@
     <div id="hero" class="relative bg-top-half pt-20">
         <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
         <div class="relative z-10">
-            <section class="mt-20 grid grid-cols-1 md:grid-cols-2 min-h-[90vh] px-6 md:px-12 py-16 gap-12 items-center">
+            <section class="mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 md:min-h-[90vh] px-4 sm:px-6 md:px-12 py-8 md:py-16 gap-8 md:gap-12 items-center">
                 <!-- Left: headline + video -->
                 <div class="flex flex-col gap-8">
                     <div class="p-6 md:p-0 rounded-xl">
-                        <h1 class="hero-title text-5xl md:text-7xl font-black tracking-tighter leading-none text-[#b8872f] mb-6 drop-shadow-md" data-i18n="hero.title">
+                        <h1 class="hero-title text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-none text-[#b8872f] mb-6 drop-shadow-md" data-i18n="hero.title">
                             STAVÍME<br />NA KVALITU
                         </h1>
                         <p class="hero-subtitle text-stone-900 max-w-md text-lg leading-relaxed border-l-4 border-[#b8872f] pl-6 uppercase tracking-tight font-semibold bg-white/60 p-4 rounded-r-lg backdrop-blur-sm" data-i18n="hero.subtitle">
@@ -217,11 +235,11 @@
     <div id="about" class="relative bg-bottom-half">
         <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px] z-0"></div>
         <div class="relative z-10">
-            <section class="grid grid-cols-1 md:grid-cols-2 px-6 md:px-12 py-32 gap-16" style="background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);">
+            <section class="grid grid-cols-1 md:grid-cols-2 px-6 md:px-12 py-16 md:py-32 gap-10 md:gap-16" style="background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);">
                 <!-- Left: philosophy -->
                 <div class="flex flex-col justify-between py-8">
                     <div>
-                        <h2 class="reveal-left text-6xl font-black text-[#b8872f] uppercase tracking-tighter mb-4 drop-shadow-sm" data-i18n="about.title">PROČ MY?</h2>
+                        <h2 class="reveal-left text-4xl sm:text-5xl md:text-6xl font-black text-[#b8872f] uppercase tracking-tighter mb-4 drop-shadow-sm" data-i18n="about.title">PROČ MY?</h2>
                         <p class="reveal-left text-xs font-bold tracking-[0.4em] text-stone-700 uppercase mb-8" style="transition-delay: 100ms;" data-i18n="about.subtitle">O SPOLEČNOSTI</p>
                         <div class="reveal h-px bg-[#b8872f]/30 mb-8" style="transition-delay: 150ms;"></div>
                         <p class="reveal text-2xl font-light text-stone-900 max-w-sm leading-tight uppercase bg-white/40 p-4 rounded-lg backdrop-blur-sm border border-white/50 shadow-sm" style="transition-delay: 200ms;" data-i18n="about.text">
@@ -270,7 +288,7 @@
             <div class="absolute bottom-10 right-10 w-48 h-48 border border-[#b8872f]/10 rounded-full reveal-scale" style="transition-delay: 500ms;"></div>
 
             <p class="reveal text-xs font-bold tracking-[0.4em] text-stone-500 uppercase mb-6" data-i18n="contact.label">KONTAKTY</p>
-            <h2 class="reveal text-4xl md:text-6xl font-black text-stone-900 uppercase tracking-tighter mb-6 drop-shadow-md" style="transition-delay: 100ms;" data-i18n="contact.title">
+            <h2 class="reveal text-3xl sm:text-4xl md:text-6xl font-black text-stone-900 uppercase tracking-tighter mb-6 drop-shadow-md" style="transition-delay: 100ms;" data-i18n="contact.title">
                 PŘIPRAVENI ZAČÍT<br />STAVĚT?
             </h2>
             <p class="reveal text-lg text-stone-600 max-w-md mb-10 uppercase tracking-tight font-medium" style="transition-delay: 200ms;" data-i18n="contact.text">

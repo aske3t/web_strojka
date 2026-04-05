@@ -80,18 +80,35 @@
                 <button class="lang-btn" data-lang="en" title="English">EN</button>
             </div>
         </div>
-        <a class="nav-phone" href="tel:+420778514861">
+        <a class="nav-phone hidden sm:inline-flex" href="tel:+420778514861">
             <span class="material-symbols-outlined nav-phone-icon">call</span>
             <span class="nav-phone-number">+420 778 514 861</span>
         </a>
-        <div class="flex gap-8 items-center">
+        <!-- Desktop nav -->
+        <div class="hidden md:flex gap-8 items-center">
             <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="index.html#hero" data-i18n="nav.home">HLAVNÍ</a>
             <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="index.html#about" data-i18n="nav.about">O NÁS</a>
             <a class="nav-link font-['Inter'] uppercase tracking-widest text-sm text-stone-600 hover:text-[#b8872f] transition-colors font-bold" href="index.html#contact" data-i18n="nav.contact">KONTAKTY</a>
         </div>
+        <!-- Mobile hamburger button -->
+        <button id="burger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 cursor-pointer" aria-label="Menu">
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+            <span class="burger-line block w-6 h-0.5 bg-stone-800 transition-all duration-300"></span>
+        </button>
     </nav>
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#f8f7f6] flex-col items-center justify-center gap-8 hidden">
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="index.html#hero" data-i18n="nav.home">HLAVNÍ</a>
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="index.html#about" data-i18n="nav.about">O NÁS</a>
+        <a class="nav-link font-['Inter'] uppercase tracking-widest text-lg text-stone-800 hover:text-[#b8872f] transition-colors font-bold" href="index.html#contact" data-i18n="nav.contact">KONTAKTY</a>
+        <a class="nav-phone" href="tel:+420778514861">
+            <span class="material-symbols-outlined nav-phone-icon">call</span>
+            <span class="nav-phone-number">+420 778 514 861</span>
+        </a>
+    </div>
     <!-- Фото для галереи -->
-    <section class = "py-16 px-6 pt-40 flex-1">
+    <section class="py-8 md:py-16 px-4 sm:px-6 pt-24 md:pt-40 flex-1">
         <div class="gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div class="gallery-card group relative overflow-hidden aspect-[16/9] brutalist-border border-stone-400 shadow-xl rounded-sm">
                 <img alt="Проект 1" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="images_gallery/photo_1_2026-04-05_00-52-44.jpg" />

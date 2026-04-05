@@ -1,3 +1,30 @@
+// ── Mobile menu toggle ──
+(() => {
+    const burger = document.getElementById('burger-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (!burger || !menu) return;
+
+    burger.addEventListener('click', () => {
+        const isOpen = menu.classList.contains('flex');
+        if (isOpen) {
+            menu.classList.remove('flex');
+            menu.classList.add('hidden');
+        } else {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+        }
+        burger.classList.toggle('open');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('flex');
+            menu.classList.add('hidden');
+            burger.classList.remove('open');
+        });
+    });
+})();
+
 // ── Intersection Observer for scroll-reveal animations ──
 const observerOptions = {
     root: null,
